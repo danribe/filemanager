@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>File Manager</title>
+</head>
+<script type="text/javascript">
+    function display(form) {
+        if (form.password.value == "admin1234") {
+            location = "index.html"
+            let token = Math.random().toString(16).substr(2)
+            localStorage.setItem('token', token)
+        } else {
+            alert("Invalid Password")
+            location = "login.html"
+        }
+    }
+</script>
+
+<body>
+    <form method="POST" class="form">
+        <div class="card">
+            <div class="card-top">
+                <img class="imglogin" src="arq.png" alt="Image" width="80" height="80">
+                <h2 class="titulo">File Manager</h2>
+            </div>
+            <div class="card-group">
+                <label>Password</label>
+                <input type="password" name="password" size="15">
+            </div>
+            <div class="card-group btn">
+                <button type="button" onclick="display(this.form)">Access</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
