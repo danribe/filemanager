@@ -1,0 +1,43 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="autoindex.css" type="text/css" media="screen" />
+    <title>File Manager</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="titulo">
+            <h1>File Manager</h1>
+        </div>
+
+        <!-- Exemplo de seleção tirado da documentação do Apache -->
+        <form class="form" action="" method="get">
+            <p>Ordenar por:
+                <select class="b1" name="C">
+                    <option class="b1" value="N" selected="selected"> Nome</option>
+                    <option class="b1" value="M"> Data de Modificação</option>
+                    <option class="b1" value="S"> Tamanho</option>
+                </select>
+                <select class="b2" name="O">
+                    <option value="A" selected="selected"> Crescente</option>
+                    <option value="D"> Decrescente</option>
+                </select>
+                Padrão: <input class="b3" type="text" name="P" value="*" />
+                <input class="b4" type="submit" name="X" value="Ir" />
+                <button class="b5" onclick='sair()'>Sair</button>
+            </p>
+
+        </form> <br>
+        <form enctype = "multipart/form-data"
+                     action = "save_file.py" method = "post">
+   <p>File: <input type = "file" name = "filename" /></p>
+   <p><input type = "submit" value = "Upload" /></p>
+   </form>
+
+        <script type="text/javascript" src="script.js"></script>
+        <div id="listagem">
