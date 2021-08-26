@@ -1,0 +1,55 @@
+body{
+    background-color: white;
+    font-family: sans-serif;
+}
+
+.form{
+    width: 400px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.card{
+    box-shadow: 1px 1px 5px gray;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.card-top{
+    text-align: center;
+}
+
+.titulo{
+    color: rgb(148, 35, 35);
+}
+
+.card-group > label{
+    width: 100%;
+    color: gray;
+    display: block;
+    text-align: center;
+}
+
+.card-group > input{
+    border-radius: 5px;
+    outline: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.card-group{
+    margin-bottom: 10px;
+}
+
+.card-group > button{
+    background-image: linear-gradient(to right, rgb(148, 35, 35), red);
+    width: 100%;
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+}
+
+.btn button:hover{
+    background-image: linear-gradient(to right, rgb(148, 35, 35), rgb(189, 43, 43));
+}
